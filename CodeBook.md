@@ -12,36 +12,58 @@ The description is located here: http://archive.ics.uci.edu/ml/datasets/Human+Ac
 The script run_analysis.R performs several steps that were outlined in the assignment.
 
 1) Merge the training and the test sets to create one data set.
-##Load the X_test.txt data into R
-##Load the X_train.txt data into R
-##Load the y_test.txt data into R
-##Load the y_train.txt data into R
-##Combine the training and the test sets to create one data set.
+
+Load the X_test.txt data into R
+
+Load the X_train.txt data into R
+
+Load the y_test.txt data into R
+
+Load the y_train.txt data into R
+
+Combine the training and the test sets to create one data set.
 
 2) Extract only the measurements on the mean and standard deviation for each measurement.
-#Use the file called features to find the needed variables
-#read in the features.txt file into R
-#find the variables we need for the anlaysis by using the grep function
+
+Use the file called features to find the needed variables
+
+read in the features.txt file into R
+
+find the variables we need for the anlaysis by using the grep function
 
 3) Uses descriptive activity names to name the activities in the data set.
-###read in the activity labels from activity_labels.txt
-#merge your dataset with the activity label
-#after merging, I reordered the columns so that all X data was in the begining, then y data and labels
+
+read in the activity labels from activity_labels.txt
+
+merge your dataset with the activity label
+
+after merging, I reordered the columns so that all X data was in the begining, then y data and labels
 
 4) Appropriately label the data set with descriptive variable names
-##Load the subject_test.txt data into R
-##Load the subject_train.txt data into R
-##combine both files by stacking
-##Now we have  1) complete and 2) subfull - combine them using cbind
-#take only the subset of variables to use for the analysis by using colstouse from above
-#varstouse - are the labels for the means and sdevs
-#colstouse - are the columns containing the means and sdevs
-#activity is in y, V2.y at the end of the file
-#subject is named subject at the end of the file
-##Now apply the new descriptive names to the data
+
+Load the subject_test.txt data into R
+
+Load the subject_train.txt data into R
+
+combine both files by stacking
+
+Now we have  1) complete and 2) subfull - combine them using cbind
+
+take only the subset of variables to use for the analysis by using colstouse from above
+
+varstouse - are the labels for the means and sdevs
+
+colstouse - are the columns containing the means and sdevs
+
+activity is in y, V2.y at the end of the file
+
+subject is named subject at the end of the file
+
+Now apply the new descriptive names to the data
 
 5) From the data set in Step4, this script creates a second, independent tidy data set with the average of each variable for each activity and each subject.
-#Use the aggregate function to run the mean on each variable while splitting it by activity, and ID
+
+Use the aggregate function to run the mean on each variable while splitting it by activity, and ID
 
 ##Variables
 *tBodyAcc_mean_X: Time  BodyAcc mean X Axis
